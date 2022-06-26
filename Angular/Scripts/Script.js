@@ -309,3 +309,33 @@ myApp.controller("consuming", function ($scope, $http) {
                 $scope.employees = response.data;
             });
     });
+
+myApp.controller("inputoutput", function ($scope, stringService) {
+        $scope.transformString = function (input) {
+            $scope.output = stringService.processString(input);
+        };
+});
+
+
+myApp.controller("demoController", function
+        ($scope, $location, $anchorScroll) {
+        $scope.scrollTo = function (scrollLocation) {
+            $location.hash(scrollLocation);
+            $anchorScroll.yOffset = 20;
+            $anchorScroll();
+        }
+});
+
+myApp.controller("countrys",
+        function ($scope, $location, $anchorScroll, $http) {
+            $http.get("CountryService.asmx/GetData")
+                .then(function (response) {
+                    $scope.countries = response.data;
+                });
+
+            $scope.scrollTo = function (countryName) {
+                $location.hash(countryName);
+                $anchorScroll();
+            }
+
+        });

@@ -68,7 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angularwork.html" />
+    <Content Include="CountryService.asmx" />
     <Content Include="EmployeeService.asmx" />
+    <Content Include="Angularwork2.html" />
     <Content Include="Img\Flower.jpg" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
@@ -77,20 +79,38 @@
     <Content Include="EmployeeList.html" />
     <Content Include="Scripts\Filter.js" />
     <Content Include="Scripts\Script.js" />
+    <Content Include="Scripts\Scriptindex.js" />
     <Content Include="Scripts\style.css" />
+    <Content Include="StudentService.asmx" />
+    <Content Include="Styleindex.css" />
+    <Content Include="Templates\courses.html" />
+    <Content Include="Templates\home.html" />
+    <Content Include="index.html" />
+    <Content Include="Templates\students.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="City.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="CountryService.asmx.cs">
+      <DependentUpon>CountryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeService.asmx.cs">
       <DependentUpon>EmployeeService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentService.asmx.cs">
+      <DependentUpon>StudentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular.route.min.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

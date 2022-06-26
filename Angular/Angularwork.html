@@ -440,5 +440,28 @@
             </tbody>
         </table>
     </div>
+    <br />
+    <h4>inputoutput</h4>
+    <div ng-controller="inputoutput">
+        <table>
+            <tr>
+                <td>Your String</td>
+                <td><input type="text" ng-model="input" /> </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" ng-model="output" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" ng-click="transformString(input)"
+                           value="Process String" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    
 </body>
 </html>
